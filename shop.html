@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <title>Navigation Bar</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+       <style type="text/css">
+               
+                    *{
+    text-decoration: none;
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	
+}
+
+                
+                .navbar{
+                       background:rgb(240, 237, 237);;
+                       font-family: elephant;
+                     
+                }
+                .navdiv{
+                       display: flex;
+            		align-items: center;
+                       justify-content: space-between;
+			position:relative;
+		
+                }
+                .logo a{
+                       font-size: 50px;  
+                       font-weight: 600;
+                       color: rgb(5, 0, 0);
+                }
+                li{
+                       list-style: none;
+                       display: inline-block;
+                }
+                li a{
+                       color: rgb(8, 0, 0);
+                       font-size: 20px;
+                       font-weight: bold;
+                       font-family: footlight MT light;	
+                       margin-right: 15px;
+               }
+
+               .nav-link:hover{
+                     color:rgb(112, 214, 245)
+               }
+               body{
+                     background:whitesmoke;
+                     background-size:cover;
+                     background-attachment: fixed;
+		        position:relative;
+
+               }
+                footer{
+                      background: rgb(240, 237, 237);
+                      
+                     justify-content: space-between;
+                     text-align: center;
+                     box-sizing: border-box;
+                     height:45px;
+                     position:absolute;
+                     width:100%;
+                     transform:translateX(-50);
+                     top:2rem;
+                     border:1px solid rgba(225,255,255,0.5);
+                     margin-top: 1350px;
+                     }
+                     .footer-navigation-list{
+                     display: flex;
+                     flex-direction:row;
+                     align-items: center;
+                     gap: 15px;
+                     }
+                     .socialIcons{
+                     display:flex;
+                     justify-content:center;
+                     
+                     }
+                     span{
+                            color:rgb(15, 14, 14);
+                     }
+
+                     .u-bold{
+                            color:rgb(15, 14, 14);
+                            font-size:15px;
+                            margin:2px;
+                            padding:0;
+                     }
+                     .socialIcons{
+                     text-decoration:none;
+                     padding:10px;
+                     margin:10px;
+                     
+                     }
+                     .socialIcons a i {
+                     font-size:15px;
+                     color:#060606;
+                     opacity:0.9;
+                     }
+
+                     .socialIcons a:hover{
+                     background-color: black;
+                     transition:0.5s;
+                     }
+                     .socialIcons a:hover i{
+                     color: rgb(164, 139, 139);
+                     transition:0.5s;
+                     }
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 180%;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 90px;
+    padding-right: 100px;
+   padding-left: 10px;
+   align-items: center;
+
+   
+  }
+
+  .card {
+    background: #dcdcdc;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position:relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+    justify-items: center;
+    margin-left: 90px;
+    width: 250px;
+    
+  }
+
+  .card:nth-child(1) { animation-delay: 0s; }
+  .card:nth-child(2) { animation-delay: 0.1s; }
+  .card:nth-child(3) { animation-delay: 0.2s; }
+  .card:nth-child(4) { animation-delay: 0.3s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.card img.default-img,
+.card img.hover-img {
+  width: 150px;
+  height: auto;
+  zoom: 100px;
+}
+
+  .card img.hover-img {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .card:hover img.default-img {
+    opacity: 0;
+  }
+
+  .card:hover img.hover-img {
+    opacity: 1;
+  }
+
+  .tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+  }
+
+  .price {
+    font-weight: bold;
+    margin: 8px 0;
+    text-align: left;
+  }
+
+  .buy-btn {
+    display: inline-block;
+    margin-top: 1px;
+    padding: 10px 15px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .buy-btn:hover {
+    background: #333;
+    color: white;
+  }
+
+ 
+
+  .subtitle {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 5px;
+    left: 100px;
+    text-align:center;
+  }
+
+    .product-details {
+      padding: 15px;
+    }
+
+    .product-details h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .product-details p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .shop-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .shop-btn:hover {
+      background: #0056b3;
+    }
+
+
+    /* ===== Shop Bar ===== */
+.shop-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  z-index: 10;
+  background: transparent;
+  margin-bottom: -50px;
+
+}
+.shop-bar button {
+  border:none;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: max(.875rem + .2vw, .925vw) !important;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 40px;
+    color: #313030;
+    box-shadow: inset 0 0 0 1px #313030;
+    text-decoration: none;
+    border: none;
+    line-height: 150%;
+    background: transparent;
+       position: relative;
+    width: 260px;
+}
+.shop-bar button:hover {
+  background: white;
+}
+
+h1{
+
+     text-align: center;
+     padding: 50px;
+       
+}
+
+
+               </style>           
+</head>
+<body>
+       <nav class="navbar">
+              <div class="navdiv">
+                     <div class="logo"><a href="https://grasyaworldwide.com/">GRASYA WORLDWIDE</a> </div>
+                     <ul>
+                            <li><a href="index.html" class="nav-link">HOME</a></li>
+                            <li><a href="Shop.html" class="nav-link">SHOP</a></li>
+                            <li><a href="About.html" class="nav-link">ABOUT</a></li>
+                     </ul>
+              </div>
+       </nav>
+  </div>
+
+
+  <h1> NEWEST COLLECTION OUT NOW!</h1>
+<!-- Shop Bar -->
+<div class="shop-bar">
+  <button onclick="filterProducts('CAMOU COLLECTION V2')">CAMOU COLLECTION V2</button>
+  <button onclick="filterProducts('SIGNATURE V2 COLLECTION')">SIGNATURE V2 COLLECTION</button>
+  <button onclick="filterProducts('SWAG COLLECTION')">SWAG COLLECTION</button>
+</div>
+
+<!-- Products -->
+<div class="wrapper"> 
+<div class="products">
+
+  <!-- Product 1 -->
+  <div class="card" data-category="CAMOU COLLECTION V2">
+    <img class="default-img" src="image/GRASYA7.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA6.jpg" alt="Peptide Liptint Hover">
+     <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+    <!-- Product 1 -->
+  <div class="card" data-category="CAMOU COLLECTION V2">
+    <img class="default-img" src="image/GRASYA5.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA4.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+ <div class="card" data-category="CAMOU COLLECTION V2">
+    <img class="default-img" src="image/GRASYA2 (2).jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA1 (2).jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+   <div class="card" data-category="CAMOU COLLECTION V2">
+    <img class="default-img" src="image/GRASYA3.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA1 (2).jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+  <div class="card" data-category="SIGNATURE V2 COLLECTION">
+    <img class="default-img" src="image/GRASYA9.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA8.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+    <div class="card" data-category="SIGNATURE V2 COLLECTION">
+    <img class="default-img" src="image/GRASYA11.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA10.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+    <div class="card" data-category="SWAG COLLECTION">
+    <img class="default-img" src="image/GRASYA13.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA12.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+      <div class="card" data-category="SIGNATURE V2 COLLECTION">
+    <img class="default-img" src="image/GRASYA15.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA14.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+      <div class="card" data-category="SIGNATURE V2 COLLECTION">
+    <img class="default-img" src="image/GRASYA19.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA18.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+      <div class="card" data-category="SWAG COLLECTION">
+    <img class="default-img" src="image/GRSAYA21.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA20.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+      <div class="card" data-category="SWAG COLLECTION">
+    <img class="default-img" src="image/GRASYA23.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA24.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+      <div class="card" data-category="SWAG COLLECTION">
+    <img class="default-img" src="image/GRASYA16.jpg" alt="Peptide Liptint">
+    <img class="hover-img" src="image/GRASYA17.jpg" alt="Peptide Liptint Hover">
+      <div class="price">PHP 1,300.00</div>
+    <div class="subtitle">CAMOU V3 CROP HOODIE WOMENS<br>(REFLECTORIZED)</div>
+    <button class="buy-btn">BUY NOW!</button>
+  </div>
+
+  
+<script>
+function filterProducts(category) {
+  const products = document.querySelectorAll('.card');
+  products.forEach(product => {
+    if (category === 'all' || product.dataset.category === category) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+}
+</script>
+   
+     <footer>
+           <div class="socialIcons">
+	<div class="footer-navigation-list">
+		<p class="u-bold">this website is for educational purposes only.</p>
+
+                 <a href="https://www.tiktok.com/@grasyaworldwide?lang=en" target="_blank" ><i class="fa-brands fa-tiktok"></i></a>
+		<span>Tiktok</span>
+		<a href="https://www.facebook.com/GrasyaWorldwide"  target="_blank"><i class="fa-brands fa-youtube"></i></a>
+		<span>Youtube</span>
+		<a href="https://www.instagram.com/grasyaworldwide/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+		<span>Instagram</span>
+
+         </div>
+
+
+        </div>
+    </div>
+</footer>
+</body>
+</html>
